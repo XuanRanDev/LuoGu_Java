@@ -6,12 +6,14 @@ import java.io.*;
  */
 public class QuickIO {
 
-    public static StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in), 32768));
-    public static PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out));
+    private static StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+    private static PrintStream out = System.out;
 
-    public static double nextDouble() throws IOException {
-        in.nextToken();
-        return in.nval;
+    public static void main(String[] args) throws IOException {
+        String s = next();
+        out.println(s);
+        out.flush();
+        out.close();
     }
 
     public static int nextInt() throws IOException {
@@ -22,14 +24,5 @@ public class QuickIO {
     public static String next() throws IOException {
         in.nextToken();
         return in.sval;
-    }
-
-    public static void main(String[] args) throws IOException {
-        String s = next();
-        out.println(s);
-
-        out.flush();
-        out.close();
-
     }
 }
