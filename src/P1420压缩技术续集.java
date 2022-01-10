@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 /**
  * Created By XuanRan on 2022/1/8
- * fixme 未完成
+ * 当数组大小开很大时，记得特判结尾0的情况
+ * 因为数组某人值是0会造成其不断增加最后没有保存
  */
 class P1420压缩技术续集 {
     public static int[][] mp = new int[305][305];
