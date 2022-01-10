@@ -5,8 +5,8 @@ import java.util.Scanner;
  * fixme 未完成
  */
 class P1420压缩技术续集 {
-    public static int[][] mp = new int[205][205];
-    public static int[] ans = new int[100];
+    public static int[][] mp = new int[305][305];
+    public static int[] ans = new int[150];
     public static int index = 1;
 
     public static void main(String[] args) {
@@ -23,11 +23,15 @@ class P1420压缩技术续集 {
         }
         Cur--; // 减去最后一步多增加的1
         ans[index++] = Cur;
-        int sx = 1, sy = 1;
         int curFlag = 0;
         int times = 0;
         for (int i = 1; i <= Cur + 1; i++) {
             for (int j = 1; j <= Cur; j++) {
+
+                if (i > Cur) {
+                    ans[index++] = times;
+                    break;
+                }
 
                 if (mp[i][j] == 0) {
                     if (curFlag == 0) {
@@ -50,11 +54,13 @@ class P1420压缩技术续集 {
         }
 
         int sum = 0;
-        for (int i = 1; i <= ans.length; i++) {
+        for (int i = 1; i <= ans.length - 1; i++) {
             if (i != 1) sum += ans[i];
+            if (ans[2] == 0 && i != 2 && ans[i] == 0) return;
             System.out.print(ans[i] + " ");
 
             if (sum == Cur * Cur) return;
         }
+
     }
 }
