@@ -9,8 +9,8 @@ fun main() {
     var n: BigInteger = sc.nextBigInteger()
     var a = n.multiply(n.subtract(BigInteger.valueOf(1))).divide(BigInteger.valueOf(2))
         .multiply(n.subtract(BigInteger.valueOf(2))).divide(
-        BigInteger.valueOf(3)
-    ).multiply(n.subtract(BigInteger.valueOf(3))).divide(BigInteger.valueOf(4))
+            BigInteger.valueOf(3)
+        ).multiply(n.subtract(BigInteger.valueOf(3))).divide(BigInteger.valueOf(4))
 
     println(a)
 }
