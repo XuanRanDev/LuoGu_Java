@@ -19,7 +19,14 @@ public class Test {
 
     @org.junit.Test
     public void TestBigInteger() {
-        System.out.println(new BigInteger("1").toString());
+        BigInteger b = new BigInteger("222222222222222244444444444294874742920208274724464");
+        String res = b.toString();
+        System.out.println("res截取Test：" + res.substring(0, res.length() - 1));
+        String end = res.substring(res.length() - 1, res.length());
+        int n = Integer.parseInt(end) - 1;
+        System.out.println(end);
+        System.out.println(res.substring(0, res.length() - 1) + n);
+//        System.out.println("截取操作：" +res.charAt(res.length() - 1));
     }
 
     @org.junit.Test
