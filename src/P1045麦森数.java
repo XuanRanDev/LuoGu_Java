@@ -62,12 +62,14 @@ class P1045麦森数 {
     }
 
     public static BigInteger QuickPow(BigInteger num, int b) {
+        //long start = System.currentTimeMillis();
         BigInteger res = BigInteger.ONE;
         while (b > 0) {
             if (((b & 1) == 1)) res = res.multiply(num);
             b >>= 1;
             num = num.multiply(num);
         }
+        // System.out.println("计算时间：" + (System.currentTimeMillis() - start));
         return res;
     }
 }
