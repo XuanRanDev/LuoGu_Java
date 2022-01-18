@@ -6,11 +6,11 @@ import java.math.BigInteger;
 /**
  * Created By XuanRan on 2022/1/15
  * fixme 暂未完成 70分
+ * 2022/1/17 使用Cpp完成
  */
 class P1045麦森数 {
     public static StreamTokenizer input = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
     public static int N;
-    public static final BigInteger res2 = BigInteger.ONE;
 
     public static void main(String[] args) throws Throwable {
         input.nextToken();
