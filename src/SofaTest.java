@@ -1,9 +1,21 @@
-import java.util.Scanner;
+import org.junit.Test;
+
+import java.math.BigInteger;
 
 /**
  * Created By XuanRan on 2022/1/16
  */
 public class SofaTest {
+
+    @Test
+    public void TestBigInteger() {
+        BigInteger big = BigInteger.ONE;
+
+        for (int i = 1; i <= 5; i++) {
+            big = big.multiply(BigInteger.valueOf(i));
+        }
+        System.out.println(big);
+    }
 
     @org.junit.Test
     public void TestQuickPow() {
