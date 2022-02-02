@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
@@ -6,8 +7,10 @@ import java.util.Scanner;
 class B2007 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        long a = sc.nextLong();
-        long b = sc.nextLong();
-        System.out.println(a + b);
+//        long a = sc.nextLong();
+//        long b = sc.nextLong();
+        BigInteger bigInteger = sc.nextBigInteger();
+        BigInteger bigInteger1 = sc.nextBigInteger();
+        System.out.println(bigInteger1.add(bigInteger));
     }
 }
