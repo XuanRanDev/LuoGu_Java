@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * Created By XuanRan on 2022/1/30
- * fixme
+ * fixme 未完成，不会
  */
 class P1321 {
     public static int ans, res;
