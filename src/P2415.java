@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 /**
  * Created By XuanRan on 2022/2/7
+ * 其实这题我没懂...
  */
 class P2415 {
     public static int num;
