@@ -7,7 +7,6 @@ import java.io.StreamTokenizer;
  */
 class B2015 {
     public static StreamTokenizer input = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
-
     public static void main(String[] args) {
         double r1 = nextDouble();
         double r2 = nextDouble();
