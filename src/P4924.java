@@ -30,7 +30,7 @@ class P4924 {
             y = nextInt();
             r = nextInt();
             z = nextInt();
-            
+
         }
 
     }
