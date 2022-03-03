@@ -1,11 +1,21 @@
 import org.junit.Test;
 
 import java.math.BigInteger;
+import java.util.Arrays;
 
 /**
  * Created By XuanRan on 2022/1/16
  */
 public class SofaTest {
+
+    public static int[] a = new int[10];
+
+    @Test
+    public void testValue() {
+        int[] b = new int[10];
+        System.out.println(Arrays.toString(a));
+        System.out.println(Arrays.toString(b));
+    }
 
     @Test
     public void TestBigInteger() {
