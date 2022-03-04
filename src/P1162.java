@@ -24,8 +24,8 @@ class P1162 {
                 mp[i][j] = nextInt();
             }
         }
-        queue.offer(new Node(1, 1));
-        vis[1][1] = 1;
+        queue.offer(new Node(0, 0));
+        vis[0][0] = 1;
 
         while (!queue.isEmpty()) {
             Node node = queue.remove();
@@ -35,13 +35,26 @@ class P1162 {
             for (int i = 0; i < 4; i++) {
                 int dx = fx + xx[i];
                 int dy = fy + yy[i];
-                /**
-                 * 为什么要+1 ？
-                 * 因为在搜索边界的情况下最后一行可能被全部覆盖
-                 */
-//                if (dx >= 1 && dx <= N + 1)
+                if (dx >= 0 && dx <= N + 1 && dy >= 0 && dy <= N + 1 && vis[dx][dy] != 1 && mp[dx][dy] == 0) {
+                    vis[dx][dy] = 1;
+                    queue.offer(new Node(dx, dy));
+                }
             }
 
+        }
+
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= N; j++) {
+                if (mp[i][j] == 0 && vis[i][j] == 1) {
+                    System.out.print(0);
+                } else if (mp[i][j] == 0 && vis[i][j] == 0) {
+                    System.out.print(2);
+                } else {
+                    System.out.print(1);
+                }
+                System.out.print(" ");
+            }
+            System.out.println();
         }
 
 
