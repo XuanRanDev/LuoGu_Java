@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  * Created By XuanRan on 2022/3/3
- * fixme 未通过
+ * Java MLE 已使用cpp通过
  */
 class P1141 {
     public static int N, M;
